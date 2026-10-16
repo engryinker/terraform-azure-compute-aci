@@ -2,13 +2,13 @@
 
 Org-standard Terraform wrapper for: **container instance groups**.
 
-Deploys into an existing resource group (passed in via `resource_group_name` / `location`) -- this module does not create the resource group itself. Compose with [terraform-azure-naming](https://github.com/<org>/terraform-azure-naming) for names and [terraform-azure-tags](https://github.com/<org>/terraform-azure-tags) for the `tags` input.
+Deploys into an existing resource group (passed in via `resource_group_name` / `location`) -- this module does not create the resource group itself. Compose with [terraform-azure-naming](https://github.com/engryinker/terraform-azure-naming) for names and [terraform-azure-tags](https://github.com/engryinker/terraform-azure-tags) for the `tags` input.
 
 ## Usage
 
 ```hcl
 module "compute-aci" {
-  source = "git::https://github.com/<org>/terraform-azure-compute-aci.git?ref=v1.0.0"
+  source = "git::https://github.com/engryinker/terraform-azure-compute-aci.git?ref=v1.0.0"
 
   resource_group_name = azurerm_resource_group.this.name
   location            = azurerm_resource_group.this.location
